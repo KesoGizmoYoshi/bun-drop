@@ -13,7 +13,25 @@ const errorMessage = ref(null);
 
 const { users, error, load } = getUsers();
 
-const handleRegister = () => {};
+load();
+
+// broken lol
+const checkUsername = () => {
+	users.value.find((u) => {
+		console.log(u);
+		if (u.username === username.value) {
+			availibility.value = "Already in use!";
+		} else if (u.username !== username.value) {
+			availibility.value = "";
+		}
+	});
+};
+
+const handleRegister = () => {
+	console.log(username.value);
+	console.log(password.value);
+	console.log(confirmPassword.value);
+};
 </script>
 <template>
 	<div class="container">
@@ -21,7 +39,7 @@ const handleRegister = () => {};
 		<div>
 			<form class="form-container" @submit.prevent="handleRegister">
 				<label>Username</label>
-				<input type="text" required v-model="username" />
+				<input type="text" required @input="checkUsername" v-model="username" />
 				<p v-if="availibility">{{ availibility }}</p>
 				<label>Password</label>
 				<input type="password" required v-model="password" />

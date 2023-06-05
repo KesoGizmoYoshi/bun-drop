@@ -1,10 +1,10 @@
 <script setup>
-import { ref } from "vue";
+import { inject, ref } from "vue";
 import { useRouter } from "vue-router";
 import getUsers from "../composables/getUsers.js";
 
 const router = useRouter();
-
+const eventBus = inject("eventBus");
 const username = ref("");
 const password = ref("");
 const errorMessage = ref(null);
@@ -20,6 +20,7 @@ const handleLogin = () => {
 				localStorage.setItem(u.username, JSON.stringify({ username: u.username, cart: [], cartSize: 0, favorites: [] }));
 			}
 			sessionStorage.setItem("login", JSON.stringify({ username: u.username }));
+			eventBus.$trigger("localStorageUpdated");
 			router.push("/");
 		}
 	});

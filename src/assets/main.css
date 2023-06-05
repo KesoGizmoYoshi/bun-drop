@@ -30,6 +30,20 @@ header h1 {
 	gap: 10px;
 }
 
+.myorder-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 25rem;
+}
+
+.order-item-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 25rem;
+}
+
 .product-card {
 	display: flex;
 	flex-direction: column;

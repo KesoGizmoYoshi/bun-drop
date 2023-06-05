@@ -1,7 +1,7 @@
 <script setup>
 import { inject } from "vue";
 const props = defineProps({
-	product: {},
+	menuItem: {},
 });
 
 const eventBus = inject("eventBus");
@@ -19,11 +19,11 @@ const handleClick = (product) => {
 
 <template>
 	<div class="product-card-details">
-		<img class="img-product" :src="`/src/assets/images/${product.image}`" alt="" />
+		<img class="img-product" :src="`/src/assets/images/${menuItem.image}`" alt="" />
 		<div>
-			<p>{{ product.name }}</p>
-			<p>{{ product.description }}</p>
-			<button @:click="handleClick(product)" class="pink-btn">Add</button>
+			<p>{{ menuItem.name }}</p>
+			<p>{{ menuItem.description }}</p>
+			<button @:click="handleClick(menuItem)" class="pink-btn">Add</button>
 		</div>
 	</div>
 </template>

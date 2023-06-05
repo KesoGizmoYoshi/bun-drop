@@ -3,11 +3,25 @@ import { inject, ref } from "vue";
 import { RouterLink, RouterView } from "vue-router";
 
 const eventBus = inject("eventBus");
-const currentUser = JSON.parse(sessionStorage.getItem("login"));
-const orderSize = ref(JSON.parse(localStorage.getItem(currentUser.username)).cartSize);
+const currentUser = ref("");
+const orderSize = ref(0);
+
+// if (currentUser.value !== null) {
+// 	orderSize.value = 0;
+// }
+
+// eventBus.$on("currentUserUpdated", () => {
+// 	currentUser.value = JSON.parse(sessionStorage.getItem("login"));
+// 	orderSize.value = JSON.parse(localStorage.getItem(currentUser.value.username)).cartSize;
+// });
 
 eventBus.$on("localStorageUpdated", () => {
-	orderSize.value = JSON.parse(localStorage.getItem(currentUser.username)).cartSize;
+	if (currentUser.value === null) {
+		orderSize.value = 0;
+	} else {
+		currentUser.value = JSON.parse(sessionStorage.getItem("login"));
+		orderSize.value = JSON.parse(localStorage.getItem(currentUser.value.username)).cartSize;
+	}
 });
 </script>
 
