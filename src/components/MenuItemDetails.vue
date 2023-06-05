@@ -6,11 +6,11 @@ const props = defineProps({
 
 const eventBus = inject("eventBus");
 
-const handleClick = (product) => {
+const handleClick = (menuItem) => {
 	const currentUser = JSON.parse(sessionStorage.getItem("login"));
 	const currentLocalStorage = JSON.parse(localStorage.getItem(currentUser.username));
-	currentLocalStorage.cart.push({ id: product.id, name: product.name });
-	currentLocalStorage.cartSize = currentLocalStorage.cart.length;
+	currentLocalStorage.orderItems.push({ id: menuItem.id, name: menuItem.name });
+	currentLocalStorage.orderSize = currentLocalStorage.orderItems.length;
 	localStorage.setItem(currentUser.username, JSON.stringify(currentLocalStorage));
 
 	eventBus.$trigger("localStorageUpdated");

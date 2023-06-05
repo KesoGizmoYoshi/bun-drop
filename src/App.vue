@@ -20,7 +20,7 @@ eventBus.$on("localStorageUpdated", () => {
 		orderSize.value = 0;
 	} else {
 		currentUser.value = JSON.parse(sessionStorage.getItem("login"));
-		orderSize.value = JSON.parse(localStorage.getItem(currentUser.value.username)).cartSize;
+		orderSize.value = JSON.parse(localStorage.getItem(currentUser.value.username)).orderSize;
 	}
 });
 </script>

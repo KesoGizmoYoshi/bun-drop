@@ -17,7 +17,7 @@ const handleLogin = () => {
 	users.value.forEach((u) => {
 		if (u.username === username.value && u.password === password.value) {
 			if (localStorage.getItem(u.username) === null) {
-				localStorage.setItem(u.username, JSON.stringify({ username: u.username, cart: [], cartSize: 0, favorites: [] }));
+				localStorage.setItem(u.username, JSON.stringify({ username: u.username, orderItems: [], orderSize: 0, favorites: [] }));
 			}
 			sessionStorage.setItem("login", JSON.stringify({ username: u.username }));
 			eventBus.$trigger("localStorageUpdated");
