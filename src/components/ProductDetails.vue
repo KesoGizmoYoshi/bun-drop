@@ -13,7 +13,7 @@ const handleClick = (product) => {
 	currentLocalStorage.cartSize = currentLocalStorage.cart.length;
 	localStorage.setItem(currentUser.username, JSON.stringify(currentLocalStorage));
 
-	eventBus.$emit("localStorageUpdated");
+	eventBus.$trigger("localStorageUpdated");
 };
 </script>
 

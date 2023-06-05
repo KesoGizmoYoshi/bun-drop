@@ -9,20 +9,6 @@ const orderSize = ref(JSON.parse(localStorage.getItem(currentUser.username)).car
 eventBus.$on("localStorageUpdated", () => {
 	orderSize.value = JSON.parse(localStorage.getItem(currentUser.username)).cartSize;
 });
-
-// const currentUser = JSON.parse(sessionStorage.getItem("login"));
-// const currentLocalStorage = JSON.parse(localStorage.getItem(currentUser.username));
-// const orderSize = ref(currentLocalStorage.cartSize);
-
-// watch(
-// 	() => localStorage.getItem(currentUser.username),
-// 	(updateCurrentLocalStorage) => {
-// 		currentLocalStorage = JSON.parse(updateCurrentLocalStorage);
-// 		orderSize.value = currentLocalStorage.cartSize;
-// 	}
-// );
-
-// console.log(orderSize.value);
 </script>
 
 <template>

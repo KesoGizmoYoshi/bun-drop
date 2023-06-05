@@ -8,7 +8,7 @@ const eventBus = reactive({
 		}
 		this.events[eventName].push(handler);
 	},
-	$emit(eventName) {
+	$trigger(eventName) {
 		if (this.events[eventName]) {
 			this.events[eventName].forEach((handler) => handler());
 		}
