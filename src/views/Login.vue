@@ -19,7 +19,7 @@ const handleLogin = () => {
 			if (localStorage.getItem(u.username) === null) {
 				localStorage.setItem(u.username, JSON.stringify({ username: u.username, cart: [], cartSize: 0, favorites: [] }));
 			}
-			sessionStorage.setItem(u.username, JSON.stringify({ isLoggedIn: true }));
+			sessionStorage.setItem("login", JSON.stringify({ username: u.username }));
 			router.push("/");
 		}
 	});
