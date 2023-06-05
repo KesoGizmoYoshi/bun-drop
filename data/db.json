@@ -14,8 +14,38 @@
 	"products": [
 		{
 			"id": 1,
-			"name": "pasta",
-			"description": "adadadadadad"
+			"name": "The Cheesy Chuckle",
+			"category": "Burger",
+			"description": "The Cheesy Chuckle is a burger that will tickle your taste buds and leave you grinning from ear to ear. Picture a juicy beef patty topped with a mountain of melted cheese, oozing and teasing with each bite. It's a hilarious harmony of flavors that will have you laughing with delight. Brace yourself for a cheesy adventure that guarantees a side-splitting experience for your taste buds!",
+			"image": "burger-1.png"
+		},
+		{
+			"id": 2,
+			"name": "Bun-ny Delight",
+			"category": "Burger",
+			"description": "Prepare to hop into burger bliss with 'Bun-ny Delight'! This whimsical creation features a juicy patty nestled between two fluffy buns, topped with fresh veggies and a secret sauce that will have your taste buds doing a happy dance. It's a burger that combines playful flavors and a dash of rabbit magic, leaving you delighted and craving more. Get ready to take a bite and bounce with joy!",
+			"image": "burger-2.png"
+		},
+		{
+			"id": 3,
+			"name": "The Beefy Belly-Laugh",
+			"category": "Burger",
+			"description": "Get ready to burst into laughter with 'The Beefy Belly-Laugh'! This burger is a mouthwatering masterpiece that will have your taste buds rolling in joy. Sink your teeth into a juicy beef patty, layered with crispy bacon, melted cheese, and a tangy barbecue sauce that's a recipe for pure delight. With each bite, you'll feel the chuckles rise from your belly, leaving you in a state of meaty merriment. Get ready for a belly-full of laughter with 'The Beefy Belly-Laugh'!",
+			"image": "burger-3.png"
+		},
+		{
+			"id": 4,
+			"name": "Laughing Patty",
+			"category": "Burger",
+			"description": "Introducing the 'Laughing Patty'– the burger that's here to tickle your taste buds and bring a smile to your face! Picture a perfectly grilled patty, topped with a symphony of toppings that will have you bursting with laughter. From the jolly cheese that stretches with every bite to the tangy pickles that add a zing of joy, this burger is a guaranteed recipe for amusement. Brace yourself for a flavor explosion that will have you giggling with every mouthful. Get ready to enjoy the hilariously delicious 'Laughing Patty'!",
+			"image": "burger-4.png"
+		},
+		{
+			"id": 5,
+			"name": "Tickle Me Toppings",
+			"category": "Burger",
+			"description": "Get ready for a taste bud tickling experience with 'Tickle Me Toppings'! This burger is all about the joy of toppings that will make you giggle with delight. Imagine a juicy patty perfectly nestled between fluffy buns, but here's the twist: it's playfully dressed with an array of toppings that will send your taste buds on a wild tickling ride. From the crispy lettuce that dances with each bite to the giggly onions and the saucy surprises, this burger is a ticklish adventure waiting to happen. Brace yourself for a burst of flavors that will leave you laughing and craving more. Get ready to indulge in the whimsically delicious 'Tickle Me Toppings'!",
+			"image": "burger-5.png"
 		}
 	]
 }

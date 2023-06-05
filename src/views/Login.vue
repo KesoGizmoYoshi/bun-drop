@@ -11,18 +11,18 @@ const errorMessage = ref(null);
 
 const { users, error, load } = getUsers();
 
+load();
+
 const handleLogin = () => {
-	load();
-
-	const user = [];
-
-	if (Array.isArray(users) && users.length > 0) {
-		const user = users.find((u) => {
-			if (u.username == username && u.password == password) {
-				router.push("/");
+	users.value.forEach((u) => {
+		if (u.username === username.value && u.password === password.value) {
+			if (localStorage.getItem(u.username) === null) {
+				localStorage.setItem(u.username, JSON.stringify({ username: u.username, cart: [], cartSize: 0, favorites: [] }));
 			}
-		});
-	}
+			sessionStorage.setItem(u.username, JSON.stringify({ isLoggedIn: true }));
+			router.push("/");
+		}
+	});
 
 	errorMessage.value = "User was not found!";
 };

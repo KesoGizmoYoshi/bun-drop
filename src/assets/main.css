@@ -30,6 +30,22 @@ header h1 {
 	gap: 10px;
 }
 
+.product-card {
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+	text-align: center;
+	margin: 2rem;
+}
+
+.product-card-details {
+	display: flex;
+	flex-direction: row;
+	align-content: space-between;
+	text-align: center;
+	margin: 2rem;
+}
+
 .container {
 	margin: 100px 50px;
 	padding: 0;
@@ -79,6 +95,11 @@ a:hover {
 
 .img-logo {
 	width: 17rem;
+}
+
+.img-product {
+	width: 17rem;
+	border-radius: 20px;
 }
 
 input {

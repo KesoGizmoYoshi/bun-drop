@@ -5,7 +5,8 @@ const props = defineProps({
 </script>
 
 <template>
-	<div class="container">
+	<div class="product-card">
+		<img class="img-product" :src="`src/assets/images/${product.image}`" alt="" />
 		<p>{{ product.name }}</p>
 	</div>
 </template>
