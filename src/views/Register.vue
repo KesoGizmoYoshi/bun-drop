@@ -37,7 +37,7 @@ const handleRegister = () => {
 	<div class="container">
 		<div class="img-logo"><img class="img-logo" src="src/assets/logo-black.png" alt="" /></div>
 		<div>
-			<form class="form-container" @submit.prevent="handleRegister">
+			<form class="form-container" @submit.prevent="handleSubmit">
 				<label>Username</label>
 				<input type="text" required @input="checkUsername" v-model="username" />
 				<p v-if="availibility">{{ availibility }}</p>

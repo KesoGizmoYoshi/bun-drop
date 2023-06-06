@@ -31,17 +31,19 @@ eventBus.$on("localStorageUpdated", () => {
 	<header>
 		<div class="nav-container">
 			<h1>BUN DROP</h1>
+			<button class="mobile-nav-toggle"></button>
 			<nav>
-				<ul v-if="currentUser">
+				<ul class="primary-navigation" data-visible="false" v-if="currentUser">
 					<li><router-link to="/">Home</router-link></li>
 					<li><router-link to="/menu">Menu</router-link></li>
 					<li>
-						<router-link to="/myorder">My Order {{ orderSize }}</router-link>
+						<router-link to="/myorder">My Order </router-link>
+						<span class="order-size-display">{{ orderSize }}</span>
 					</li>
 					<li><router-link to="/about">About</router-link></li>
 					<li><router-link to="/about">Log Out</router-link></li>
 				</ul>
-				<ul v-else>
+				<ul class="primary-navigation" data-visible="false" v-else>
 					<li><router-link to="/login">Login</router-link></li>
 					<li><router-link to="/register">Register</router-link></li>
 					<li><router-link to="/about">About</router-link></li>

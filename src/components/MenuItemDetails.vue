@@ -27,14 +27,16 @@ const addToFavorites = (menuItem) => {
 </script>
 
 <template>
-	<div class="product-card-details">
-		<img class="img-product" :src="`/src/assets/images/${menuItem.image}`" alt="" />
-		<div>
+	<div class="container">
+		<div class="menu-item-details-container">
+			<img class="img-item-details" :src="`/src/assets/images/${menuItem.image}`" alt="" />
+		</div>
+		<div class="menu-item-details-container">
 			<p>{{ menuItem.name }}</p>
-			<p>{{ menuItem.description }}</p>
-			<button class="pink-btn">Return to menu</button>
-			<button @:click="addToOrder(menuItem)" class="pink-btn">Add</button>
 			<button @:click="addToFavorites(menuItem)" class="blue-btn">Make Favorite</button>
+			<p>{{ menuItem.description }}</p>
+			<button class="dark-btn">Return to menu</button>
+			<button @:click="addToOrder(menuItem)" class="pink-btn">Add</button>
 		</div>
 	</div>
 </template>

@@ -41,7 +41,19 @@ header h1 {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
 	width: 25rem;
+	margin-bottom: 1rem;
+}
+
+.landing-page-card {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 25rem;
+	margin-bottom: 1rem;
 }
 
 .product-card {
@@ -53,12 +65,13 @@ header h1 {
 	margin: 1rem;
 }
 
-.product-card-details {
+.menu-item-details-container {
 	display: flex;
-	flex-direction: row;
-	align-content: space-between;
-	text-align: center;
-	margin: 2rem;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 1rem;
+	width: 25rem;
 }
 
 .filter-container {
@@ -100,10 +113,6 @@ header h1 {
 	z-index: 2;
 }
 
-ul {
-	list-style-type: none;
-}
-
 header li {
 	display: inline;
 	margin-left: 30px;
@@ -129,8 +138,13 @@ a:hover {
 	width: 17rem;
 }
 
-.img-product {
+.img-item {
 	width: 17rem;
+	border-radius: 20px;
+}
+
+.img-item-details {
+	width: 25rem;
 	border-radius: 20px;
 }
 
@@ -190,4 +204,69 @@ input {
 	height: 2rem;
 	width: 40rem;
 	text-align: center;
+}
+
+.centered-text {
+	text-align: center;
+}
+
+.order-size-display {
+	background-color: #e8e8e8;
+	border-radius: 20px;
+	padding: 5px 15px;
+	color: rgb(255, 73, 103);
+	box-shadow: none;
+}
+
+.primary-navigation {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.mobile-nav-toggle {
+	display: none;
+}
+
+.primary-navigation[data-visible="true"] {
+	transform: translateX(0%);
+}
+/* 
+@media (max-width: 70rem) {
+	.primary-navigation {
+		position: fixed;
+		inset: 0 0 0 50%;
+		background-color: #a7d0e3;
+	}
+
+	header li {
+		display: block;
+	}
+} */
+
+@media (max-width: 70rem) {
+	.primary-navigation {
+		position: fixed;
+		inset: 0 0 0 30%;
+		background-color: #a7d0e3;
+		transform: translateX(100%);
+	}
+
+	header li {
+		display: block;
+	}
+
+	.mobile-nav-toggle {
+		display: block;
+		background: url(src/assets/icon-menu.svg);
+		background-repeat: no-repeat;
+		position: absolute;
+		z-index: 9999;
+		width: 3.2rem;
+		height: 2.2rem;
+		top: 2rem;
+		right: 2rem;
+		border: 0;
+		cursor: pointer;
+	}
 }

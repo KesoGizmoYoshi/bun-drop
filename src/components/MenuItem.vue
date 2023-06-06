@@ -23,7 +23,7 @@ console.log(isFavorite.name);
 <template>
 	<div class="product-card">
 		<div>
-			<img class="img-product" :src="`src/assets/images/${menuItem.image}`" alt="" />
+			<img class="img-item" :src="`src/assets/images/${menuItem.image}`" alt="" />
 			<img class="img-gold-star" src="src/assets/gold-star.png" alt="" v-if="isFavorite" />
 		</div>
 

@@ -14,7 +14,7 @@ load();
 </script>
 
 <template>
-	<div class="container" v-if="currentUser"><MenuItemDetails :menuItem="menuItem" /></div>
+	<div v-if="currentUser"><MenuItemDetails :menuItem="menuItem" /></div>
 	<div class="container" v-else>
 		<LoginForm />
 	</div>
