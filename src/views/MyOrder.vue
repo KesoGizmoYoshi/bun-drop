@@ -1,6 +1,5 @@
 <script setup>
 import { inject, ref } from "vue";
-import authentication from "../composables/authentication.js";
 import LoginForm from "../components/LoginForm.vue";
 
 const eventBus = inject("eventBus");
