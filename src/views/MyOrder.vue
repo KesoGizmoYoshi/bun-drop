@@ -1,33 +1,21 @@
 <script setup>
 import { inject, ref } from "vue";
 import authentication from "../composables/authentication.js";
-// import { useRouter } from "vue-router";
+import LoginForm from "../components/LoginForm.vue";
 
-// const eventBus = inject("eventBus");
-// const router = useRouter();
 const eventBus = inject("eventBus");
-const { currentUser, checkUserAuth } = authentication();
-checkUserAuth();
-console.log(currentUser.value.username);
+//const { currentUser, checkUserAuth } = authentication();
+const orderItems = ref([]);
 
-// const currentLocalStorage = ref([]);
-const orderItems = ref(JSON.parse(localStorage.getItem(currentUser.value.username)).orderItems);
-console.log(orderItems.value);
-// const auth = () => {
-// 	const currentUser = JSON.parse(sessionStorage.getItem("login"));
+//checkUserAuth();
 
-// 	if (currentUser === null) {
-// 		router.push("/login");
-// 	} else {
-// 		eventBus.$trigger("localStorageUpdated");
-// 		orderItems.value = ref(JSON.parse(localStorage.getItem(currentUser.username)).cart);
-// 	}
-// };
-
-// auth();
+const currentUser = JSON.parse(sessionStorage.getItem("login"));
+if (currentUser) {
+	orderItems.value = JSON.parse(localStorage.getItem(currentUser.username)).orderItems;
+}
 
 const remove = (index) => {
-	const currentLocalStorage = JSON.parse(localStorage.getItem(currentUser.value.username));
+	const currentLocalStorage = JSON.parse(localStorage.getItem(currentUser.username));
 	currentLocalStorage.orderItems.splice(index, 1);
 	currentLocalStorage.orderSize = currentLocalStorage.orderItems.length;
 	localStorage.setItem(currentLocalStorage.username, JSON.stringify(currentLocalStorage));
@@ -37,7 +25,7 @@ const remove = (index) => {
 </script>
 
 <template>
-	<div class="container">
+	<div class="container" v-if="currentUser">
 		<div class="myorder-container">
 			<div class="order-item-container" v-for="(item, index) in orderItems" :key="index">
 				{{ item.name }}
@@ -45,5 +33,8 @@ const remove = (index) => {
 			</div>
 		</div>
 		<button class="pink-btn"><router-link to="/payment">Continue to payment</router-link></button>
+	</div>
+	<div class="container" v-else>
+		<LoginForm />
 	</div>
 </template>

@@ -2,13 +2,17 @@
 import { inject, ref, computed } from "vue";
 import MenuItem from "../components/MenuItem.vue";
 import getMenuItems from "../composables/getMenuItems.js";
+import LoginForm from "../components/LoginForm.vue";
 const eventBus = inject("eventBus");
-eventBus.$trigger("localStorageUpdated");
 
+const currentUser = JSON.parse(sessionStorage.getItem("login"));
 const { menuItems, error, load } = getMenuItems();
 const search = ref("");
 
-load();
+if (currentUser) {
+	load();
+	eventBus.$trigger("localStorageUpdated");
+}
 
 const matchingMenuItems = computed(() => {
 	const query = search.value.toLowerCase().trim();
@@ -27,18 +31,23 @@ const matchingMenuItems = computed(() => {
 </script>
 
 <template>
-	<div class="container">
-		<input type="text" v-model="search" />
-		<button class="pink-btn">Burgers</button>
-		<button class="pink-btn">Fries</button>
-		<button class="pink-btn">Drinks</button>
-		<button class="pink-btn">Favorites</button>
+	<div class="filter-container" v-if="currentUser">
+		<input class="search-input" type="text" v-model="search" />
+		<div>
+			<button class="blue-btn">Burgers</button>
+			<button class="blue-btn">Fries</button>
+			<button class="blue-btn">Drinks</button>
+			<button class="blue-btn">Favorites</button>
+		</div>
 	</div>
-	<div class="container">
+	<div class="container" v-if="currentUser">
 		<div v-for="menuItem in matchingMenuItems.value" :key="MenuItem.id">
 			<router-link :to="{ name: 'Details', params: { id: menuItem.id } }">
 				<MenuItem :menuItem="menuItem" />
 			</router-link>
 		</div>
+	</div>
+	<div class="container" v-else>
+		<LoginForm />
 	</div>
 </template>
