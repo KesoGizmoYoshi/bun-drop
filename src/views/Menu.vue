@@ -28,6 +28,12 @@ const matchingMenuItems = computed(() => {
 		return filteredMenuItems;
 	}
 });
+
+const handleClick = (filterName) => {
+	if (filterName === "favorites") {
+		matchingMenuItems.value =
+	}
+};
 </script>
 
 <template>
@@ -37,7 +43,7 @@ const matchingMenuItems = computed(() => {
 			<button class="blue-btn">Burgers</button>
 			<button class="blue-btn">Fries</button>
 			<button class="blue-btn">Drinks</button>
-			<button class="blue-btn">Favorites</button>
+			<button class="blue-btn" @:click="handleClick('favorites')">Favorites</button>
 		</div>
 	</div>
 	<div class="container" v-if="currentUser">
