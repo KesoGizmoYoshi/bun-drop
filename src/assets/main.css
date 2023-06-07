@@ -10,7 +10,7 @@ body {
 }
 
 header {
-	background-image: url(src/assets/background-header.png);
+	background-image: url(/src/assets/background-header.png);
 	height: 11rem;
 	padding: 0 50px;
 }
