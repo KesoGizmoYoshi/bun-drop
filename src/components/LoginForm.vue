@@ -13,7 +13,7 @@ const { users, error, load } = getUsers();
 
 load();
 
-const handleLogin = () => {
+const handleSubmit = () => {
 	users.value.forEach((u) => {
 		if (u.username === username.value && u.password === password.value) {
 			if (localStorage.getItem(u.username) === null) {
@@ -25,14 +25,14 @@ const handleLogin = () => {
 		}
 	});
 
-	errorMessage.value = "User was not found!";
+	errorMessage.value = "Username or password is wrong!";
 };
 </script>
 
 <template>
 	<div class="img-logo"><img class="img-logo" src="src/assets/logo-black.png" alt="" /></div>
 	<div>
-		<form class="form-container" @submit.prevent="handleLogin">
+		<form class="form-container" @submit.prevent="handleSubmit">
 			<label>Username</label>
 			<input type="text" required v-model="username" />
 			<label>Password</label>

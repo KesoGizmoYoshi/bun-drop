@@ -7,6 +7,7 @@ import Menu from "../views/Menu.vue";
 import Details from "../views/Details.vue";
 import MyOrder from "../views/MyOrder.vue";
 import Payment from "../views/Payment.vue";
+import Favorites from "../views/Favorites.vue";
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -51,6 +52,11 @@ const router = createRouter({
 			path: "/payment",
 			name: "Payment",
 			component: Payment,
+		},
+		{
+			path: "/favorites",
+			name: "Favorites",
+			component: Favorites,
 		},
 	],
 });

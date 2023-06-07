@@ -1,9 +1,10 @@
 <script setup>
-import { ref } from "vue";
+import { inject, ref } from "vue";
 import { useRouter } from "vue-router";
 import getUsers from "../composables/getUsers.js";
 
 const router = useRouter();
+const eventBus = inject("eventBus");
 
 const username = ref("");
 const password = ref("");
@@ -15,22 +16,37 @@ const { users, error, load } = getUsers();
 
 load();
 
-// broken lol
-const checkUsername = () => {
-	users.value.find((u) => {
-		console.log(u);
-		if (u.username === username.value) {
-			availibility.value = "Already in use!";
-		} else if (u.username !== username.value) {
-			availibility.value = "";
-		}
-	});
-};
-
-const handleRegister = () => {
+const handleSubmit = () => {
 	console.log(username.value);
 	console.log(password.value);
 	console.log(confirmPassword.value);
+
+	const isUsernameAvailable = users.value.find((u) => u.username === username.value);
+
+	if (isUsernameAvailable) {
+		errorMessage.value = "Username is already used!";
+	} else {
+		if (password.value.length < 8 || confirmPassword.value.length < 8) {
+			errorMessage.value = "Password requires atleast 8 characters!";
+		} else {
+			if (password.value !== confirmPassword.value) {
+				errorMessage.value = "Passwords does not match!";
+			} else {
+				fetch("http://localhost:3000/users", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({ username: username.value, password: password.value }),
+				});
+
+				sessionStorage.setItem("login", JSON.stringify({ username: username.value }));
+				localStorage.setItem(username.value, JSON.stringify({ username: username.value, orderItems: [], orderSize: 0, favorites: [] }));
+				eventBus.$trigger("localStorageUpdated");
+				router.push("/");
+			}
+		}
+	}
 };
 </script>
 <template>

@@ -1,8 +1,8 @@
 <script setup>
 import { inject, ref } from "vue";
-import LoginForm from "../components/LoginForm.vue";
+import { useRouter } from "vue-router";
 import Confirmation from "../components/Confirmation.vue";
-
+const router = useRouter();
 const eventBus = inject("eventBus");
 const currentUser = JSON.parse(sessionStorage.getItem("login"));
 const orderItems = ref([]);
@@ -10,6 +10,9 @@ const confirmedOrder = ref(false);
 
 if (currentUser) {
 	orderItems.value = JSON.parse(localStorage.getItem(currentUser.username)).orderItems;
+	eventBus.$trigger("localStorageUpdated");
+} else {
+	router.push("/login");
 }
 
 const fullName = ref("");
@@ -48,7 +51,7 @@ const handleSubmit = (orderItems) => {
 </script>
 
 <template>
-	<div class="container" v-if="currentUser && orderItems.length > 0 && !confirmedOrder">
+	<div class="container" v-if="orderItems.length > 0 && !confirmedOrder">
 		<form class="form-container" @submit.prevent="handleSubmit(orderItems)">
 			<div>
 				<label>Full Name</label>
@@ -76,9 +79,6 @@ const handleSubmit = (orderItems) => {
 	</div>
 	<div class="container centered-text" v-else-if="confirmedOrder">
 		<Confirmation />
-	</div>
-	<div class="container" v-else-if="!currentUser">
-		<LoginForm />
 	</div>
 	<div class="container" v-else>Your order is empty, please add some items from our menu, before you can proceed to payment.</div>
 </template>

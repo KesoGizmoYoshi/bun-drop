@@ -1,4 +1,16 @@
-<script setup></script>
+<script setup>
+import { inject } from "vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
+const eventBus = inject("eventBus");
+const currentUser = JSON.parse(sessionStorage.getItem("login"));
+
+if (currentUser) {
+	eventBus.$trigger("localStorageUpdated");
+} else {
+	router.push("/login");
+}
+</script>
 
 <template>
 	<div class="container">

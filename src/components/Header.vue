@@ -1,21 +1,11 @@
 <script setup>
 import { inject, ref } from "vue";
-import { RouterLink } from "vue-router";
+import { useRouter, RouterLink } from "vue-router";
 
+const router = useRouter();
 const eventBus = inject("eventBus");
-//const currentUser = ref("");
 const orderSize = ref(0);
-
 const currentUser = ref(JSON.parse(sessionStorage.getItem("login")));
-
-// if (currentUser.value !== null) {
-// 	orderSize.value = 0;
-// }
-
-// eventBus.$on("currentUserUpdated", () => {
-// 	currentUser.value = JSON.parse(sessionStorage.getItem("login"));
-// 	orderSize.value = JSON.parse(localStorage.getItem(currentUser.value.username)).cartSize;
-// });
 
 eventBus.$on("localStorageUpdated", () => {
 	if (!currentUser) {
@@ -25,6 +15,12 @@ eventBus.$on("localStorageUpdated", () => {
 		orderSize.value = JSON.parse(localStorage.getItem(currentUser.value.username)).orderSize;
 	}
 });
+
+const logOut = () => {
+	sessionStorage.clear();
+	router.push("/login");
+	currentUser.value = false;
+};
 </script>
 
 <template>
@@ -36,12 +32,13 @@ eventBus.$on("localStorageUpdated", () => {
 				<ul class="primary-navigation" data-visible="false" v-if="currentUser">
 					<li><router-link to="/">Home</router-link></li>
 					<li><router-link to="/menu">Menu</router-link></li>
+					<li><router-link to="/favorites">Favorites</router-link></li>
 					<li>
 						<router-link to="/myorder">My Order </router-link>
 						<span class="order-size-display">{{ orderSize }}</span>
 					</li>
 					<li><router-link to="/about">About</router-link></li>
-					<li><router-link to="/about">Log Out</router-link></li>
+					<li><a @click="logOut">Log out</a></li>
 				</ul>
 				<ul class="primary-navigation" data-visible="false" v-else>
 					<li><router-link to="/login">Login</router-link></li>
