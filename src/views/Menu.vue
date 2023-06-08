@@ -18,21 +18,6 @@ if (currentUser) {
 	router.push("/login");
 }
 
-// const matchingMenuItems = computed(() => {
-// 	const query = search.value.toLowerCase().trim();
-// 	if (query === "") {
-// 		return menuItems;
-// 	} else {
-// 		const filteredMenuItems = ref([]);
-// 		menuItems.value.forEach((menuItem) => {
-// 			if (menuItem.name.toLowerCase().includes(query)) {
-// 				filteredMenuItems.value.push(menuItem);
-// 			}
-// 		});
-// 		return filteredMenuItems;
-// 	}
-// });
-
 const matchingMenuItems = computed(() => {
 	const query = search.value.toLowerCase().trim();
 	if (query === "") {
@@ -56,11 +41,6 @@ function getMenuItem(menuItem) {
 <template>
 	<div class="filter-container">
 		<input class="search-input" type="text" v-model="search" />
-		<div>
-			<button class="blue-btn">Burgers</button>
-			<button class="blue-btn">Fries</button>
-			<button class="blue-btn">Drinks</button>
-		</div>
 	</div>
 	<div class="container">
 		<div v-for="menuItem in matchingMenuItems" :key="menuItem.id">

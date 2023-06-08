@@ -32,9 +32,11 @@ const remove = (index) => {
 		<div class="myorder-container" v-if="orderItems.length > 0">
 			<div class="order-item-container" v-for="(item, index) in orderItems" :key="index">
 				{{ item.name }}
-				<button class="dark-btn" @:click="remove(index)">X</button>
+				<button class="delete-btn" @:click="remove(index)">X</button>
 			</div>
-			<button class="pink-btn"><router-link to="/payment">Continue to payment</router-link></button>
+			<div class="order-item-container justify-content-center">
+				<button class="pink-btn"><router-link to="/payment">Continue to payment</router-link></button>
+			</div>
 		</div>
 		<div v-else>Your order is empty, please add some items from our menu, before you can proceed to payment.</div>
 	</div>

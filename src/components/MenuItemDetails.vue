@@ -64,12 +64,13 @@ const removeFromFavorite = (menuItem) => {
 			<img class="img-item-details" :src="`/src/assets/images/${menuItem.image}`" alt="" />
 		</div>
 		<div class="menu-item-details-container">
-			<p>{{ menuItem.name }}</p>
-			<button @:click="addToOrder(menuItem)" class="pink-btn">Add</button>
-			<button @:click="addToFavorite(menuItem)" class="blue-btn" v-if="!isFavorite">Make Favorite</button>
-			<button @:click="removeFromFavorite(menuItem)" class="blue-btn" v-else>Remove Favorite</button>
+			<h2>{{ menuItem.name }}</h2>
+			<h4>Price: ${{ menuItem.price }}</h4>
+			<button @:click="addToOrder(menuItem)" class="pink-btn">Add to Order</button>
+			<button @:click="addToFavorite(menuItem)" class="blue-btn" v-if="!isFavorite">Add to Favorites</button>
+			<button @:click="removeFromFavorite(menuItem)" class="blue-btn" v-else>Remove from Favorites</button>
 			<p>{{ menuItem.description }}</p>
-			<button class="dark-btn">Return to menu</button>
+			<button class="dark-btn">Back to menu</button>
 		</div>
 	</div>
 </template>

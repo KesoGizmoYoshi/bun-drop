@@ -27,7 +27,7 @@ const logOut = () => {
 	<header>
 		<div class="nav-container">
 			<h1>BUN DROP</h1>
-			<button class="mobile-nav-toggle"></button>
+			<button class="mobile-nav-toggle" aria-expanded="false"></button>
 			<nav>
 				<ul class="primary-navigation" data-visible="false" v-if="currentUser">
 					<li><router-link to="/">Home</router-link></li>

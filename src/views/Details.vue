@@ -22,5 +22,5 @@ if (currentUser) {
 </script>
 
 <template>
-	<div><MenuItemDetails :menuItem="menuItem" /></div>
+	<div :key="menuItem.id"><MenuItemDetails :menuItem="menuItem" /></div>
 </template>
