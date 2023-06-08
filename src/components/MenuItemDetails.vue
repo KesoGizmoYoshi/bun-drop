@@ -70,7 +70,8 @@ const removeFromFavorite = (menuItem) => {
 			<button @:click="addToFavorite(menuItem)" class="blue-btn" v-if="!isFavorite">Add to Favorites</button>
 			<button @:click="removeFromFavorite(menuItem)" class="blue-btn" v-else>Remove from Favorites</button>
 			<p>{{ menuItem.description }}</p>
-			<button class="dark-btn">Back to menu</button>
+
+			<button class="dark-btn"><router-link to="/menu">Back to menu</router-link></button>
 		</div>
 	</div>
 </template>

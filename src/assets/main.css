@@ -8,6 +8,7 @@ body {
 	color: #212121;
 	font-family: "Poppins", sans-serif;
 }
+
 h1,
 h2,
 h4 {
@@ -90,6 +91,8 @@ header h1 {
 	align-items: right;
 	margin-bottom: 1rem;
 	width: 30rem;
+	font-size: 0.8rem;
+	gap: 0.5rem;
 }
 
 .filter-container {
@@ -244,6 +247,9 @@ select {
 
 .centered-text {
 	text-align: center;
+}
+.light-text-color {
+	color: #e8e8e8;
 }
 
 .order-size-display {
