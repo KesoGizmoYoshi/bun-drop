@@ -19,13 +19,13 @@ if (currentUser) {
 }
 
 const matchingMenuItems = computed(() => {
-	const query = search.value.toLowerCase().trim();
-	if (query === "") {
+	const searchQuery = search.value.toLowerCase().trim();
+	if (search.value.toLowerCase().trim() === "") {
 		return menuItems.value;
 	} else {
 		const filteredMenuItems = [];
 		menuItems.value.forEach((menuItem) => {
-			if (menuItem.name.toLowerCase().includes(query)) {
+			if (menuItem.name.toLowerCase().includes(searchQuery)) {
 				filteredMenuItems.push(menuItem);
 			}
 		});

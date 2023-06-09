@@ -1,29 +1,25 @@
-# bun-drop
+# Kom igång...
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Installerar alla nödvändiga paket
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Startar json-server
+
+```sh
+npm run json:server
+```
+
+### Kompilerar appen med Hot-Reload
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+# Använd...
 
-```sh
-npm run build
-```
+För att kunna använda sidan krävs det att användaren är inloggad; använd den redan skapade användaren ”user”/”password” eller registrera en ny användare. En inloggad användare kan sen utforska en gedigen meny, där användaren erbjuds att kunna dynamiskt söka igenom menyn. Varje produkt har en tillhörande produktsida, där användaren kan lägga till produkten till beställningen. På samma sida kan användaren välja att lägga till eller ta bort produkten som favorit. Dessa favoriter kan sedan ses tillsammans på en egen sida, men användarens favoriter kan också ses markerade med stjärna i självaste menyn. När en produkt läggs till i beställningen uppdateras även en räknare i navigeringsfältet. Den uppdateras även så fort en produkt tas bort ifrån beställningen. När man kikar på själva beställning har man möjlighet att ta bort produkter, dock kan betalsidan enbart nås om där finns minst en produkt kvar i beställningen. Bun Drop erbjuder betalkort och Swish som betalningsalternativ. Vid godkänd betalning bekräftas beställningen med en uppskattad leveranstid för användarens beställning. Slutligen så är sidan även anpassad för att användas på både dator och mobiltelefon.
+
+# Redogörelse...
