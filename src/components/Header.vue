@@ -30,7 +30,7 @@ const logOut = () => {
 			<button class="mobile-nav-toggle" aria-expanded="false"></button>
 			<nav>
 				<ul class="primary-navigation" data-visible="false" v-if="currentUser">
-					<li><router-link to="/">Home</router-link></li>
+					<li><router-link linkActiveClass="active" to="/">Home</router-link></li>
 					<li><router-link to="/menu">Menu</router-link></li>
 					<li><router-link to="/favorites">Favorites</router-link></li>
 					<li>
