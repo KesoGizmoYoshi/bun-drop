@@ -331,4 +331,36 @@ select {
 	.landing-page-card {
 		padding: 1rem;
 	}
+
+	.myorder-container {
+		width: 20rem;
+	}
+
+	.order-item-container {
+		width: 20rem;
+	}
+
+	.search-input {
+		width: 20rem;
+	}
+
+	.img-logo {
+		width: 14rem;
+	}
+
+	.img-item {
+		width: 14rem;
+	}
+
+	.img-item-details {
+		width: 20rem;
+	}
+
+	.img-gold-star {
+		width: 2rem;
+	}
+
+	.menu-item-details-container {
+		align-items: center;
+	}
 }

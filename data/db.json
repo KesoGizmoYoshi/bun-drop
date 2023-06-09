@@ -1,94 +1,140 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "username": "user",
-      "password": "password"
-    }
-  ],
-  "menuItems": [
-    {
-      "id": 1,
-      "name": "The Cheesy Chuckle",
-      "price": 8.99,
-      "category": "Burger",
-      "description": "The Cheesy Chuckle is a burger that will tickle your taste buds and leave you grinning from ear to ear. Picture a juicy beef patty topped with a mountain of melted cheese, oozing and teasing with each bite. It's a hilarious harmony of flavors that will have you laughing with delight. Brace yourself for a cheesy adventure that guarantees a side-splitting experience for your taste buds!",
-      "image": "burger-1.png"
-    },
-    {
-      "id": 2,
-      "name": "Bun-ny Delight",
-      "price": 8.99,
-      "category": "Burger",
-      "description": "Prepare to hop into burger bliss with 'Bun-ny Delight'! This whimsical creation features a juicy patty nestled between two fluffy buns, topped with fresh veggies and a secret sauce that will have your taste buds doing a happy dance. It's a burger that combines playful flavors and a dash of rabbit magic, leaving you delighted and craving more. Get ready to take a bite and bounce with joy!",
-      "image": "burger-2.png"
-    },
-    {
-      "id": 3,
-      "name": "The Beefy Belly-Laugh",
-      "price": 8.99,
-      "category": "Burger",
-      "description": "Get ready to burst into laughter with 'The Beefy Belly-Laugh'! This burger is a mouthwatering masterpiece that will have your taste buds rolling in joy. Sink your teeth into a juicy beef patty, layered with crispy bacon, melted cheese, and a tangy barbecue sauce that's a recipe for pure delight. With each bite, you'll feel the chuckles rise from your belly, leaving you in a state of meaty merriment. Get ready for a belly-full of laughter with 'The Beefy Belly-Laugh'!",
-      "image": "burger-3.png"
-    },
-    {
-      "id": 4,
-      "name": "Laughing Patty",
-      "price": 8.99,
-      "category": "Burger",
-      "description": "Introducing the 'Laughing Patty'– the burger that's here to tickle your taste buds and bring a smile to your face! Picture a perfectly grilled patty, topped with a symphony of toppings that will have you bursting with laughter. From the jolly cheese that stretches with every bite to the tangy pickles that add a zing of joy, this burger is a guaranteed recipe for amusement. Brace yourself for a flavor explosion that will have you giggling with every mouthful. Get ready to enjoy the hilariously delicious 'Laughing Patty'!",
-      "image": "burger-4.png"
-    },
-    {
-      "id": 5,
-      "name": "Tickle Me Toppings",
-      "price": 8.99,
-      "category": "Burger",
-      "description": "Get ready for a taste bud tickling experience with 'Tickle Me Toppings'! This burger is all about the joy of toppings that will make you giggle with delight. Imagine a juicy patty perfectly nestled between fluffy buns, but here's the twist: it's playfully dressed with an array of toppings that will send your taste buds on a wild tickling ride. From the crispy lettuce that dances with each bite to the giggly onions and the saucy surprises, this burger is a ticklish adventure waiting to happen. Brace yourself for a burst of flavors that will leave you laughing and craving more. Get ready to indulge in the whimsically delicious 'Tickle Me Toppings'!",
-      "image": "burger-5.png"
-    },
-    {
-      "id": 6,
-      "name": "Burgerlicious Giggles",
-      "price": 8.99,
-      "category": "Burger",
-      "description": "Get ready to experience the burger of a lifetime with 'Burgerlicious Giggles'! This mouthwatering creation is a burst of flavor that will have you grinning from ear to ear. Picture a perfectly grilled patty topped with crispy bacon, melty cheese, and a medley of toppings that will make your taste buds dance. But that's not all – each bite comes with a side of laughter, as the flavors tickle your senses and leave you giggling with delight. Indulge in the joyous experience of ´'Burgerlicious Giggles' and let your taste buds join in the delicious merriment.",
-      "image": "burger-6.png"
-    },
-    {
-      "id": 7,
-      "name": "The Chuckle Patty",
-      "price": 8.99,
-      "category": "Burger",
-      "description": "Get ready to laugh your way through a burger experience like no other with 'The Chuckle Patty'! This mouthwatering delight is packed with flavor, featuring a juicy patty surrounded by a medley of delicious toppings. But here's the twist – each bite of 'The Chuckle Patty' is designed to tickle your taste buds and ignite bursts of laughter. It's a delightful symphony of flavors and giggles that will leave you with a grin from ear to ear. Indulge in the laughter-infused deliciousness of 'The Chuckle Patty' and embark on a burger adventure that promises both culinary satisfaction and contagious merriment.",
-      "image": "burger-7.png"
-    },
-    {
-      "id": 8,
-      "name": "Grin and Grill",
-      "price": 8.99,
-      "category": "Burger",
-      "description": "Get ready to 'Grin and Grill' with a burger experience that will have you smiling from start to finish! Sink your teeth into a juicy patty nestled between perfectly toasted buns, adorned with a mouthwatering array of toppings. This flavor sensation is designed to ignite your taste buds and leave you beaming with delight. With every bite, the harmonious combination of savory ingredients will have you grinning uncontrollably. Indulge in the sizzle and satisfaction of 'Grin and Grill', where every moment is a reminder that happiness is best served between two buns. Get ready for a burger adventure that will make you want to keep coming back for more.",
-      "image": "burger-8.png"
-    },
-    {
-      "id": 9,
-      "name": "The Belly Buster",
-      "price": 8.99,
-      "category": "Burger",
-      "description": "Get ready to take on 'The Belly Buster' – a burger that will leave you satisfied and craving more! Brace yourself for a flavor explosion as you sink your teeth into a juicy patty, nestled between two pillowy buns. Topped with a mouthwatering assortment of ingredients, this burger is a heavyweight champion in both taste and satisfaction. With each bite, 'The Belly Buster' unleashes an onslaught of savory flavors that will have your taste buds dancing with delight. It's a culinary experience that will truly leave your belly happily rumbling. So, get ready to unleash your hunger and conquer 'The Belly Buster' – the ultimate burger adventure that's sure to make your taste buds cheer.",
-      "image": "burger-9.png"
-    }
-  ],
-  "orders": [
-    {
-      "orderContent": [
-        {
-          "id": 3,
-          "name": "The Beefy Belly-Laugh"
-        }
-      ],
-      "id": 1
-    }
-  ]
+	"users": [
+		{
+			"id": 1,
+			"username": "user",
+			"password": "password"
+		}
+	],
+	"menuItems": [
+		{
+			"id": 1,
+			"name": "The Cheesy Chuckle",
+			"price": 8.99,
+			"category": "Burger",
+			"description": "The Cheesy Chuckle is a burger that will tickle your taste buds and leave you grinning from ear to ear. Picture a juicy beef patty topped with a mountain of melted cheese, oozing and teasing with each bite. It's a hilarious harmony of flavors that will have you laughing with delight. Brace yourself for a cheesy adventure that guarantees a side-splitting experience for your taste buds!",
+			"image": "burger-1.png"
+		},
+		{
+			"id": 2,
+			"name": "Bun-ny Delight",
+			"price": 8.99,
+			"category": "Burger",
+			"description": "Prepare to hop into burger bliss with 'Bun-ny Delight'! This whimsical creation features a juicy patty nestled between two fluffy buns, topped with fresh veggies and a secret sauce that will have your taste buds doing a happy dance. It's a burger that combines playful flavors and a dash of rabbit magic, leaving you delighted and craving more. Get ready to take a bite and bounce with joy!",
+			"image": "burger-2.png"
+		},
+		{
+			"id": 3,
+			"name": "The Beefy Belly-Laugh",
+			"price": 8.99,
+			"category": "Burger",
+			"description": "Get ready to burst into laughter with 'The Beefy Belly-Laugh'! This burger is a mouthwatering masterpiece that will have your taste buds rolling in joy. Sink your teeth into a juicy beef patty, layered with crispy bacon, melted cheese, and a tangy barbecue sauce that's a recipe for pure delight. With each bite, you'll feel the chuckles rise from your belly, leaving you in a state of meaty merriment. Get ready for a belly-full of laughter with 'The Beefy Belly-Laugh'!",
+			"image": "burger-3.png"
+		},
+		{
+			"id": 4,
+			"name": "Laughing Patty",
+			"price": 8.99,
+			"category": "Burger",
+			"description": "Introducing the 'Laughing Patty'– the burger that's here to tickle your taste buds and bring a smile to your face! Picture a perfectly grilled patty, topped with a symphony of toppings that will have you bursting with laughter. From the jolly cheese that stretches with every bite to the tangy pickles that add a zing of joy, this burger is a guaranteed recipe for amusement. Brace yourself for a flavor explosion that will have you giggling with every mouthful. Get ready to enjoy the hilariously delicious 'Laughing Patty'!",
+			"image": "burger-4.png"
+		},
+		{
+			"id": 5,
+			"name": "Tickle Me Toppings",
+			"price": 8.99,
+			"category": "Burger",
+			"description": "Get ready for a taste bud tickling experience with 'Tickle Me Toppings'! This burger is all about the joy of toppings that will make you giggle with delight. Imagine a juicy patty perfectly nestled between fluffy buns, but here's the twist: it's playfully dressed with an array of toppings that will send your taste buds on a wild tickling ride. From the crispy lettuce that dances with each bite to the giggly onions and the saucy surprises, this burger is a ticklish adventure waiting to happen. Brace yourself for a burst of flavors that will leave you laughing and craving more. Get ready to indulge in the whimsically delicious 'Tickle Me Toppings'!",
+			"image": "burger-5.png"
+		},
+		{
+			"id": 6,
+			"name": "Burgerlicious Giggles",
+			"price": 8.99,
+			"category": "Burger",
+			"description": "Get ready to experience the burger of a lifetime with 'Burgerlicious Giggles'! This mouthwatering creation is a burst of flavor that will have you grinning from ear to ear. Picture a perfectly grilled patty topped with crispy bacon, melty cheese, and a medley of toppings that will make your taste buds dance. But that's not all – each bite comes with a side of laughter, as the flavors tickle your senses and leave you giggling with delight. Indulge in the joyous experience of ´'Burgerlicious Giggles' and let your taste buds join in the delicious merriment.",
+			"image": "burger-6.png"
+		},
+		{
+			"id": 7,
+			"name": "The Chuckle Patty",
+			"price": 8.99,
+			"category": "Burger",
+			"description": "Get ready to laugh your way through a burger experience like no other with 'The Chuckle Patty'! This mouthwatering delight is packed with flavor, featuring a juicy patty surrounded by a medley of delicious toppings. But here's the twist – each bite of 'The Chuckle Patty' is designed to tickle your taste buds and ignite bursts of laughter. It's a delightful symphony of flavors and giggles that will leave you with a grin from ear to ear. Indulge in the laughter-infused deliciousness of 'The Chuckle Patty' and embark on a burger adventure that promises both culinary satisfaction and contagious merriment.",
+			"image": "burger-7.png"
+		},
+		{
+			"id": 8,
+			"name": "Grin and Grill",
+			"price": 8.99,
+			"category": "Burger",
+			"description": "Get ready to 'Grin and Grill' with a burger experience that will have you smiling from start to finish! Sink your teeth into a juicy patty nestled between perfectly toasted buns, adorned with a mouthwatering array of toppings. This flavor sensation is designed to ignite your taste buds and leave you beaming with delight. With every bite, the harmonious combination of savory ingredients will have you grinning uncontrollably. Indulge in the sizzle and satisfaction of 'Grin and Grill', where every moment is a reminder that happiness is best served between two buns. Get ready for a burger adventure that will make you want to keep coming back for more.",
+			"image": "burger-8.png"
+		},
+		{
+			"id": 9,
+			"name": "The Belly Buster",
+			"price": 8.99,
+			"category": "Burger",
+			"description": "Get ready to take on 'The Belly Buster' – a burger that will leave you satisfied and craving more! Brace yourself for a flavor explosion as you sink your teeth into a juicy patty, nestled between two pillowy buns. Topped with a mouthwatering assortment of ingredients, this burger is a heavyweight champion in both taste and satisfaction. With each bite, 'The Belly Buster' unleashes an onslaught of savory flavors that will have your taste buds dancing with delight. It's a culinary experience that will truly leave your belly happily rumbling. So, get ready to unleash your hunger and conquer 'The Belly Buster' – the ultimate burger adventure that's sure to make your taste buds cheer.",
+			"image": "burger-9.png"
+		},
+		{
+			"id": 10,
+			"name": "Crispy Chuckle Spuds",
+			"price": 2.99,
+			"category": "Fries",
+			"description": "Get ready to giggle with every crunchy bite of 'Crispy Chuckle Spuds'! These fries are here to bring the laughter to your taste buds. Picture perfectly golden and crispy spuds, seasoned to perfection, ready to take you on a delightful potato adventure. As you savor each fry, you can't help but crack a smile and let out a chuckle. They're the sidekick that adds an extra dose of crispy comedy to your Bun Drop experience. So, get ready to munch on 'Crispy Chuckle Spuds' and let the laughter-filled flavors dance on your palate, making your meal an unforgettable laughter feast!",
+			"image": "fries-1.png"
+		},
+		{
+			"id": 11,
+			"name": "Laughing Tater Tangles",
+			"price": 2.99,
+			"category": "Fries",
+			"description": "Get ready to burst into laughter with every twist and turn of 'Laughing Tater Tangles'! These fries are here to tangle up your taste buds in a hilarious potato adventure. Imagine crispy spirals of seasoned spuds, ready to tickle your palate and bring a smile to your face. As you unravel each twisted tater, you can't help but let out a contagious laugh. They're the playful sidekick that adds an extra layer of comedy to your Bun Drop experience. So, get ready to dive into the whimsical world of 'Laughing Tater Tangles' and enjoy a fry-fueled laughter fest that will have you coming back for more hilarious twists and turns!",
+			"image": "fries-2.png"
+		},
+		{
+			"id": 12,
+			"name": "Giggle Gulp Shake",
+			"price": 4.99,
+			"category": "Drinks",
+			"description": "Get ready to 'Giggle Gulp Shake' your way into a milkshake adventure like no other! This creamy concoction of pure delight is here to tickle your taste buds and unleash waves of laughter. Imagine sipping on a velvety smooth shake that's packed with flavors that will make you burst into giggles. With each 'Giggle Gulp Shake' sip, you'll be treated to a delightful blend of creaminess and comedy. It's the perfect accompaniment to your Bun Drop burger, adding an extra layer of merriment to your meal. So, grab your straw, take a 'Giggle Gulp Shake,' and let the laughter-infused flavors swirl through your senses, making every sip a moment of pure joy!",
+			"image": "milkshake-1.png"
+		},
+		{
+			"id": 13,
+			"name": "Fizz-a-Laughs",
+			"price": 3.99,
+			"category": "Drinks",
+			"description": "Get ready to experience a carbonated comedy show with 'Fizz-a-Laughs' soda! This effervescent beverage is here to tickle your taste buds and make you burst into laughter with every sip. Imagine the exhilarating fizz and playful flavors that will have you grinning from ear to ear. Each 'Fizz-a-Laughs' sip is like a little comedy routine happening on your tongue, delivering a delightful pop of laughter. It's the ultimate soda experience to accompany your Bun Drop burger, adding an extra layer of merriment to your meal. So, grab a bottle of 'Fizz-a-Laughs,' let the bubbles dance on your palate, and get ready to raise your glass to endless giggles and fizzy fun!",
+			"image": "soda-1.png"
+		},
+		{
+			"id": 14,
+			"name": "Belly Jiggler Pop",
+			"price": 3.99,
+			"category": "Drinks",
+			"description": "Get ready to jiggle your belly with 'Belly Jiggler Pop'! This soda is here to bring the laughter and make your tummy shake with delight. Imagine sipping on a fizzy concoction that's specially designed to tickle your taste buds and bring a smile to your face. With each 'Belly Jiggler Pop' sip, you'll experience a delightful burst of flavors that will make your belly jiggle with joy. It's the perfect companion to your Bun Drop burger, adding an extra dose of whimsical fun to your meal. So, grab a bottle of 'Belly Jiggler Pop,' let the fizzy goodness tickle your senses, and get ready for a belly-shaking, laughter-inducing experience that will leave you wanting more!",
+			"image": "soda-2.png"
+		},
+		{
+			"id": 15,
+			"name": "Burst-O-Laughter Bubbly",
+			"price": 3.99,
+			"category": "Drinks",
+			"description": "Get ready to unleash bursts of laughter with every sip of 'Burst-O-Laughter Bubbly'! This soda is your ticket to a fizzy and hilarious adventure. Imagine indulging in a sparkling beverage that's filled with effervescent bubbles and contagious giggles. With each 'Burst-O-Laughter Bubbly' sip, you'll feel the tickle of joy and experience a delightful explosion of laughter. It's the perfect companion to your Bun Drop burger, adding an extra layer of fizzy fun and merriment to your meal. So, grab a bottle of 'Burst-O-Laughter Bubbly,' pop the cap, and get ready for a fizzy, funny, and laughter-filled experience that will leave you bubbling with happiness!",
+			"image": "soda-3.png"
+		},
+		{
+			"id": 16,
+			"name": "Fizzy Chuckle Fizz",
+			"price": 3.99,
+			"category": "Drinks",
+			"description": "Get ready for a 'Fizzy Chuckle Fizz' that will have you bursting with laughter! This fizzy soda is like a comedy show in a bottle, delivering a delightful explosion of effervescence and giggles. Picture yourself sipping on a sparkling beverage that's bubbling with playful flavors and a touch of whimsy. With each 'Fizzy Chuckle Fizz' sip, you'll feel the tickle of joy and experience an uproarious burst of laughter. It's the perfect beverage to accompany your Bun Drop burger, adding an extra layer of fizzy fun and amusement to your meal. So, grab a can of 'Fizzy Chuckle Fizz,' pop it open, and get ready to savor the fizz, flavors, and belly-shaking hilarity that will make your taste buds and funny bone rejoice!",
+			"image": "soda-4.png"
+		}
+	],
+	"orders": []
 }
